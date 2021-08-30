@@ -1,10 +1,9 @@
 {
-  "name": "arena-channel-rss",
   "version": 2,
-  "redirects": [
-    { "source": "/", "destination": "https://github.com/garrying/arena-channel-rss" }
-  ],
   "rewrites": [
-    { "source": "/feed/(.*)", "destination": "/api/feed" }
+    {
+      "source": "/feed/(.*)",
+      "destination": "/api/feed"
+    }
   ]
 }
