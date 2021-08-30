@@ -57,8 +57,9 @@ const arenaChannelBlocks = channelName => {
         feed.item({
           title: item.title,
           guid: `${arenaURL}/block/${item.id}`,
-          url: `${arenaURL}/block/${item.id}`,
           description: arenaChannelBlocksContents(item),
+          url: item.source?.url || `${arenaURL}/block/${item.id}`,
+          enclosure: arenaChannelBlocksEnclosure(item),
           author: item.user.username,
           date: new Date(item.created_at)
         })
